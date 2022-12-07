@@ -2,7 +2,8 @@
 #include "Canvas.h"
 #include <SDL.h>
 #include "../Math/Ray.h"
-#include "../Objects/Object.h"
+
+class Scene;
 
 class Renderer
 {
@@ -15,7 +16,7 @@ public:
 	void CopyCanvas(const Canvas& canvas);
 	void Present();
 
-	void Render(Canvas& canvas, Object* object);
+	void Render(Canvas& canvas, Scene& scene);
 
 	friend class Canvas;
 
