@@ -2,6 +2,7 @@
 #include "Canvas.h"
 #include <SDL.h>
 #include "../Math/Ray.h"
+#include "Camera.h"
 
 class Scene;
 
@@ -16,7 +17,7 @@ public:
 	void CopyCanvas(const Canvas& canvas);
 	void Present();
 
-	void Render(Canvas& canvas, Scene& scene);
+	void Render(Canvas& canvas, Scene& scene, Camera& camera, int samples = 5);
 
 	friend class Canvas;
 
