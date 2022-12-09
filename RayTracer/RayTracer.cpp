@@ -10,7 +10,7 @@ int main(int, char**)
 {
 	const int width = 800;
 	const int height = 600;
-	const int samples = 1;
+	const int samples = 50;
 	const float fov = 30.0f;
 
 	Renderer renderer;
@@ -20,7 +20,6 @@ int main(int, char**)
 	Canvas canvas(width, height, renderer);
 	//Camera camera({ 0, 0.3, 2 }, { 0, 0, 0 }, { 0, 1, 0 }, 60.0f, width / (float)height);
 	Camera camera({ 13, 2, 3 }, { 0, 0, 0 }, { 0, 1, 0 }, fov, width / (float)height);
-
 
 	Scene scene{ {1, 0.5f, 0.5f},{0.5f, 0.5f, 1} };
 	InitScene02(scene);
